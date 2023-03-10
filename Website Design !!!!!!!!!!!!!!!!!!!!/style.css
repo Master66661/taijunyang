@@ -237,6 +237,7 @@ nav .navigation ul li a:hover{
 }
 
 #registration .reminder .time .date{
+    display: flex;
     text-align: center;
     padding: 13px 33px;
     background: rgba(255, 255, 255, 0.25);
@@ -383,47 +384,112 @@ nav .navigation ul li a:hover{
 
  /*contact*/
 
-.location{
-    width: 80%;
-    margin: auto;
-    padding: 10% 0;
-}
-
-.location iframe{
-    width: 100%;
-}
-
-.contact-us{
-    width: 90%;
-    margin: auto;
-}
-
-.contact-col{
-    flex-basis: 50%;
-    margin-bottom: 30px;
-}
-
-.contact-col div{
+ .container{
+    padding: 12vw 8vw 12vw 8vw;
+    width: 85%;
+    height: 50%;
+    display: flex;
+    flex-direction:column;
+    margin: 0 auto;
+    border-top: 50px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  .container .content{
+    display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    border-style: none;
-}
-.contact-col button{
-    padding: 10px;
-    background:none;
-    border: 1px solid #f80;
-    color: #000;
-    margin: 10pxS;
-    }
-.contact-col button:hover{
-    background:#f80
-}
-.contact-col input{
+    justify-content: space-between;
+  }
+
+  .container .content .left-side{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .content .left-side .details{
+    display: grid;
+    grid-gap: 0.5rem;
+    margin: 14px;
+    text-align: center;
+  }
+
+  .content .left-side .details i{
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+  }
+  .content .left-side .details .topic{
+    font-size: 18px;
+    font-weight: 500;
+    font-weight: bold;
+  }
+  .content .left-side .details .text-one,
+  .content .left-side .details .text-two{
+    font-size: 14px;
+    color: #afafb6;
+  }
+
+  .container .content .right-side{
+    width: 75%;
+    margin-left: 75px;
+  }
+
+  .content .right-side .topic-text{
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+  }
+
+  .right-side .input-box{
+    height: 50px;
     width: 100%;
-    padding: 15px;
-    margin-bottom: 30px;
+    margin: 12px 0;
+  }
+
+  .right-side .input-box input,
+  .right-side .input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
     outline: none;
-    border: 1px solid #ccc;
-}
+    font-size: 16px;
+    background: #F0F1F8;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+  }
 
+  .right-side .message-box{
+    min-height: 110px;
+  }
 
+  .right-side .input-box textarea{
+    padding-top: 6px;
+  }
+
+  .right-side .button{
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .right-side .button input[type="submit"]{
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #3e2093;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button input[type="submit"]:hover{
+    background: #ffffff;
+    color: #3e2093;
+  }
